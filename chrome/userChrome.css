@@ -14,3 +14,29 @@ It must work together with “Startpage_for_transparent_toolbox.css” in "userC
 
 /* macOS Tahoe floating toolbar */
 @import "neptune/optionals/macos_tahoe_theme_toolbar.css";
+
+/* ========== HIDE PRIVATE BROWSING INDICATOR - OVERRIDE FIREFOX NOVA ========== */
+#private-browsing-indicator-with-label,
+#private-browsing-indicator-with-label > .private-browsing-indicator-icon,
+#private-browsing-indicator-with-label > .private-browsing-indicator-label,
+#privatebrowsing-button,
+#private-browsing-button,
+#private-browsing-indicator,
+.private-browsing-indicator,
+.private-browsing-indicator-with-label,
+.private-browsing-indicator-icon,
+.private-browsing-indicator-label {
+	display: none !important;
+	visibility: collapse !important;
+	opacity: 0 !important;
+	height: 0 !important;
+	width: 0 !important;
+	overflow: hidden !important;
+}
+
+/* Also hide via attribute selector for maximum coverage */
+:root[privatebrowsingmode] #private-browsing-indicator-with-label,
+:root[privatebrowsingmode="temporary"] #private-browsing-indicator-with-label {
+	display: none !important;
+	visibility: collapse !important;
+}
