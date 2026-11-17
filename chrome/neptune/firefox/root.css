@@ -79,7 +79,6 @@
 
 		&:not(.experiment) > .pip-small {
 				background-color: #ffffff3f !important;
-				backdrop-filter: blur(6px);
 				border: none !important;
 				border-radius: var(--border-radius-circle) !important;
 				box-shadow: var(--nept-glass-shadow) !important;
@@ -94,7 +93,6 @@
 	.controlBar {
 		height: 31px !important;
 		background-color: #00000080 !important;
-		backdrop-filter: blur(2em);
 		margin: 6px;
 		border-radius: var(--border-radius-small);
 
