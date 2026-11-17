@@ -77,7 +77,6 @@
 	--panel-border-color: transparent !important;
 	--toolbar-background-color: transparent !important;
 	--tabpanel-background-color: transparent !important;
-	--browser-clip-region: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	--toolbarbutton-padding-inner: calc((var(--size-item-large) - var(--size-item-small)) / 2) !important;
 	--toolbarbutton-padding-outer-narrow: 2px !important;
 	--toolbarbutton-icon-fill: color-mix(in srgb, currentColor 70%, transparent) !important;
