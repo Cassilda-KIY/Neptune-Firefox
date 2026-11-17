@@ -159,20 +159,7 @@
 }
 
 #privatebrowsing-button {
-	list-style-image: url("../assets/icons/privateBrowsing.svg") !important;
-	display: inline-flex !important;
-	padding: 0 !important;
-
-	> .toolbarbutton-icon,
-	> .toolbarbutton-badge-stack {
-		width: var(--icon-size-small) !important;
-		height: var(--icon-size-small) !important;
-		min-width: var(--icon-size-small) !important;
-		min-height: var(--icon-size-small) !important;
-		max-width: var(--icon-size-small) !important;
-		max-height: var(--icon-size-small) !important;
-		clip-path: none !important;
-	}
+	display: none !important;
 }
 
 #characterencoding-button {
