@@ -53,25 +53,34 @@
 }
 
 @-moz-document url("about:privatebrowsing") {
+	/* Hide search and logo on private browsing page */
 	.logo-and-wordmark,
-	.search-inner-wrapper {
+	.search-inner-wrapper,
+	.search-wrapper,
+	.search-button {
 		display: none !important;
 	}
 
-	.search-inner-wrapper > content-search-handoff-ui {
-		--content-search-handoff-ui-background-color: var(--newtab-background-color-secondary) !important;
+	/* Reposition the main content container */
+	.content-wrapper,
+	.main-content-wrapper,
+	#root {
+		padding-top: 0 !important;
 	}
 
+	/* Fix the info-border card positioning */
 	.info-border {
 		background: transparent !important;
 		padding: 0 !important;
 		border-radius: var(--border-radius-xlarge) !important;
 		box-shadow: none !important;
+		margin: 0 auto !important;
+		max-width: 680px !important;
+		width: 100% !important;
 
 		> :is(.promo.below-search.promo-visible, .info) {
-			--button-border-radius:  var(--border-radius-xlarge) !important;
+			--button-border-radius: var(--border-radius-xlarge) !important;
 			background-color: var(--newtab-background-color-secondary) !important;
-			backdrop-filter: blur(var(--dimension-4));
 			border-radius: var(--border-radius-xlarge) !important;
 			box-shadow: none !important;
 		}
@@ -89,6 +98,21 @@
 				}
 			}
 		}
+	}
+
+	/* Ensure the privacy info text is properly positioned */
+	.info,
+	.promo {
+		width: 100% !important;
+		max-width: 680px !important;
+		margin: 0 auto !important;
+		text-align: center !important;
+	}
+
+	/* Nova-specific: fix the main content area */
+	.newtab-customizer-menu,
+	.newtab-edit-button {
+		display: none !important;
 	}
 }
 
