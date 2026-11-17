@@ -370,11 +370,22 @@ treechildren::-moz-tree-image(query, OrganizerQuery_tags_______v) {
 	}
 }
 
-/* Additional selectors for the large purple indicator in the toolbar */
+/* Hide Firefox Nova private browsing indicator - all variants */
+#private-browsing-indicator-with-label,
+#private-browsing-indicator-with-label > *,
+#private-browsing-indicator,
 #privatebrowsing-button,
 #private-browsing-button,
-[aria-label="Private Browsing"],
-toolbarbutton#privatebrowsing-button,
-toolbarbutton#private-browsing-button {
+.private-browsing-indicator,
+.private-browsing-indicator-with-label,
+.private-browsing-indicator-icon,
+.private-browsing-indicator-label,
+privatebrowsing-icon,
+privatebrowsing-indicator,
+#private-browsing-newtab-icon,
+:root[privatebrowsingmode] #private-browsing-indicator-with-label,
+:root[privatebrowsingmode=temporary] #private-browsing-indicator-with-label,
+:root[privatebrowsingmode="temporary"] #private-browsing-indicator-with-label {
 	display: none !important;
+	visibility: collapse !important;
 }
