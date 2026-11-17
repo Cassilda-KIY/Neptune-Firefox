@@ -847,11 +847,10 @@
 		> .tab-label-container {
 			height: inherit !important;
 			mask-image: none !important;
-			text-align: center !important;
 
 			#tabbrowser-tabs[orient="horizontal"] &:not([pinned]) {
 				max-width: fit-content;
-				margin-inline: auto !important;
+				margin-inline-end: auto;
 
 				/* Compensate the padding of the tab with a normal close-button state to center the label. */
 				&:not(#tabbrowser-tabs[closebuttons="activetab"] &:not([selected], tab-split-view-wrapper > tab &)):not(tab:is([tab-note], [muted], [soundplaying], [activemedia-blocked]) &) {

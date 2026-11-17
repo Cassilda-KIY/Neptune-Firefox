@@ -57,7 +57,7 @@
 		}
 	}
 
-	.search-container {
+	#search-container {
 		display: flex;
 		justify-content: flex-end;
 

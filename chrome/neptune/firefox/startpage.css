@@ -25,18 +25,21 @@
 
 	.search-wrapper input,
 	.search-handoff-button {
+		backdrop-filter: saturate(1.5) blur(6px);
 		border: none !important;
 		box-shadow: none !important;
 	}
 
 	.contentSearchSuggestionTable {
 		background-color: var(--newtab-background-color-secondary) !important;
+		backdrop-filter: saturate(1.5) blur(var(--dimension-12));
 		border-radius: var(--border-radius-large) !important;
 		box-shadow: var(--nept-small-shadow), var(--nept-menu-shadow) !important;
 
 		.contentSearchHeader, .contentSearchSettingsButton {
 			background-color: var(--newtab-background-color-secondary) !important;
-				border-color: transparent !important;
+			backdrop-filter: saturate(1.5) blur(var(--dimension-12));
+			border-color: transparent !important;
 		}
 
 		.contentSearchOneOffsTable {
@@ -52,26 +55,47 @@
 	}
 }
 
-
 @-moz-document url("about:privatebrowsing") {
-	/* Hide the centre search box on private browsing page */
-	.search-inner-wrapper,
-	.search-wrapper {
+	.logo-and-wordmark,
+	.search-inner-wrapper {
 		display: none !important;
 	}
 
-	/* Hide the privacy info card text */
+	.search-inner-wrapper > content-search-handoff-ui {
+		--content-search-handoff-ui-background-color: var(--newtab-background-color-secondary) !important;
+	}
+
 	.info-border {
-		display: none !important;
+		background: transparent !important;
+		padding: 0 !important;
+		border-radius: var(--border-radius-xlarge) !important;
+		box-shadow: none !important;
+
+		> :is(.promo.below-search.promo-visible, .info) {
+			--button-border-radius:  var(--border-radius-xlarge) !important;
+			background-color: var(--newtab-background-color-secondary) !important;
+			backdrop-filter: blur(var(--dimension-4));
+			border-radius: var(--border-radius-xlarge) !important;
+			box-shadow: none !important;
+		}
+
+		.promo-cta .primary {
+			background-color: var(--color-accent-primary) !important;
+			color: var(--button-text-color-primary) !important;
+			cursor: default !important;
+
+			&:hover {
+				background-color: var(--color-accent-primary-hover) !important;
+
+				&:active {
+					background-color: var(--color-accent-primary-active) !important;
+				}
+			}
+		}
 	}
 }
 
-
 @-moz-document url("about:home"), url("about:newtab"), url("about:welcome") {
-	* {
-		cursor: auto !important;
-	}
-
 	.logo-and-wordmark-wrapper:not(.nova-enabled .logo-and-wordmark-wrapper) {
 		display: none;
 	}
@@ -87,6 +111,10 @@
 	.nova-enabled .top-sites-list {
 		column-gap: var(--space-xlarge) !important;
 		row-gap: var(--space-small) !important;
+
+		* {
+			cursor: default !important;
+		}
 	}
 
 	@container content-grid (inline-size >= calc(6 * (72px + var(--space-xlarge)))) {
@@ -135,7 +163,9 @@
 
 			panel-list {
 				background-color: var(--newtab-background-color-secondary) !important;
-						> panel-item {
+				backdrop-filter: saturate(1.5) blur(var(--dimension-12));
+
+				> panel-item {
 					--panel-item-button-margin: 0 var(--space-xsmall) !important;
 					--panel-item-button-border-radius: var(--border-radius-small) !important;
 				}
@@ -168,7 +198,8 @@
 			background-color: var(--newtab-background-color-secondary) !important;
 			height: calc(2 * var(--size-item-xlarge)) !important;
 			width: calc(2 * var(--size-item-xlarge)) !important;
-				outline: none !important;
+			backdrop-filter: saturate(1.5) blur(var(--dimension-12));
+			outline: none !important;
 			border: none !important;
 			border-radius: var(--border-radius-xlarge) !important;
 			box-shadow: none !important;
@@ -219,6 +250,7 @@
 	}
 
 	.context-menu {
+		backdrop-filter: saturate(1.5) blur(var(--dimension-12));
 		border-radius: var(--border-radius-medium) !important;
 		box-shadow: var(--nept-small-shadow), var(--nept-menu-shadow) !important;
 		font: menu !important;
@@ -312,10 +344,9 @@
 	}
 
 	.modal {
-		.edit-topsites-wrapper & {
-			width: 40em !important;
-			top: 25vh !important;
+		backdrop-filter: saturate(1.5) blur(var(--dimension-12));
 
+		.edit-topsites-wrapper & {
 			> .topsite-form .form-wrapper input[type=text] {
 				height: var(--button-min-height) !important;
 				border-radius: var(--border-radius-small) !important;
@@ -329,8 +360,10 @@
 				box-shadow: var(--box-shadow-level-3);
 			}
 
-			> .topsite-form .top-site-outer {
-				margin-top: var(--space-large) !important;
+			> .topsite-form .form-wrapper .field .icon-clear-input {
+				--button-size-icon-small: var(--size-item-small);
+				--button-min-height: var(--size-item-small);
+				--button-border-radius: var(--border-radius-medium);
 			}
 		}
 	}
@@ -624,10 +657,12 @@
 
 	.feature-highlight .feature-highlight-modal {
 		border-radius: var(--border-radius-large) !important;
+		backdrop-filter: saturate(1.5) blur(var(--dimension-12)) !important;
 		box-shadow: var(--box-shadow-level-4) !important;
 
 		&::after {;
-				box-shadow: var(--box-shadow-level-4) !important;
+			backdrop-filter: saturate(1.5) blur(var(--dimension-12)) !important;
+			box-shadow: var(--box-shadow-level-4) !important;
 		}
 	}
 
@@ -665,7 +700,8 @@
 			--weather-hot-background-color: transparent !important;
 			height: auto !important;
 			padding: var(--space-small) var(--space-medium) !important;
-				gap: var(--space-medium);
+			backdrop-filter: saturate(1.5) blur(6px);
+			gap: var(--space-medium);
 			border-radius: var(--border-radius-xlarge) !important;
 			outline: none !important;
 			box-shadow: none !important;
@@ -779,17 +815,20 @@
 			--button-min-height-small: var(--size-item-small) !important;
 			--button-border-radius: var(--border-radius-large) !important;
 			background-color: var(--newtab-background-color-secondary) !important;
-				border-radius: var(--border-radius-circle) !important;
+			backdrop-filter: saturate(1.5) blur(var(--dimension-12));
+			border-radius: var(--border-radius-circle) !important;
 		}
 
 		> .weatherNotAvailable {
 			background-color: var(--newtab-background-card) !important;
-				border-radius: var(--border-radius-circle) !important;
+			backdrop-filter: saturate(1.5) blur(var(--dimension-12));
+			border-radius: var(--border-radius-circle) !important;
 		}
 	}
 
 	.weatherInfoLink {
 		background-color: var(--newtab-weather-background-color) !important;
+		backdrop-filter: saturate(1.5) blur(var(--dimension-12));
 		padding: var(--space-medium) var(--space-large) !important;
 		border-radius: var(--border-radius-circle) !important;
 	}
@@ -816,19 +855,23 @@
 
 	.weather-placeholder {
 		background: var(--newtab-background-card) !important;
+		backdrop-filter: saturate(1.5) blur(var(--dimension-12));
 		border-radius: var(--border-radius-xlarge) !important;
 
 		.placeholder-fill {
-				border-radius: var(--border-radius-xlarge) !important;
+			backdrop-filter: saturate(1.5) blur(var(--dimension-12));
+			border-radius: var(--border-radius-xlarge) !important;
 		}
 	}
 
 	.feature-highlight .feature-highlight-modal {
 		border-radius: var(--border-radius-large) !important;
+		backdrop-filter: saturate(1.5) blur(var(--dimension-12)) !important;
 		box-shadow: var(--box-shadow-level-4) !important;
 
 		&::after {;
-				box-shadow: var(--box-shadow-level-4) !important;
+			backdrop-filter: saturate(1.5) blur(var(--dimension-12)) !important;
+			box-shadow: var(--box-shadow-level-4) !important;
 		}
 	}
 

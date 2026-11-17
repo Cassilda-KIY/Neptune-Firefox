@@ -1,6 +1,6 @@
-/* This style will partially cover the DevTools on the start page. */
+/* https://github.com/yiiyahui/Neptune-Firefox */
 :root {
-	--opt-theme-toolbox-height: calc(var(--urlbar-min-height) + 2 * var(--nept-browser-toolbox-padding));
+	--opt-theme-toolbox-height: calc(var(--urlbar-height) + 2 * var(--nept-browser-toolbox-padding));
 	--opt-theme-tabsToolbar-height: calc(var(--tab-min-height) + 2 * var(--tab-overflow-clip-margin) + var(--nept-browser-toolbox-padding) / 2);
 	--opt-theme-bookmarksbar-height: calc(var(--size-item-small) + 2 * var(--bookmark-block-padding));
 	--opt-theme-button-outer-padding: calc(((var(--tab-min-height) + 2 * var(--space-medium)) - var(--size-item-large)) / 2);
@@ -25,20 +25,10 @@
 		}
 
 		#urlbar-container {
-			/* Fix urlbar misalignment when returning to the homepage */
-			--urlbar-container-min-width: 320.1px;
-
-			@media (max-width: 770px) {
-				--urlbar-container-min-width: 155.1px;
-			}
-
-			@media (max-width: 550px) {
-				--urlbar-container-min-width: 101.1px;
-			}
-
 			> .urlbar > .urlbar-background {
 				background-color: var(--opt-theme-toolbar-item-background) !important;
-						box-shadow: var(--opt-theme-toolbar-item-inner-shadow) !important;
+				backdrop-filter: saturate(1.2) blur(6px);
+				box-shadow: var(--opt-theme-toolbar-item-inner-shadow) !important;
 
 				@media (-moz-mac-tahoe-theme) or (-moz-pref("tahoe.theme.toolbar")) {
 					box-shadow: var(--opt-theme-toolbar-item-inner-shadow),  var(--opt-tahoe-theme-urlbar-shadow) !important;
@@ -67,7 +57,8 @@
 				:root:not([customizing]) #nav-bar &:not(:-moz-window-inactive) {
 					background-color: var(--opt-theme-toolbar-item-background);
 					box-shadow: var(--opt-theme-toolbar-item-inner-shadow), var(--opt-tahoe-theme-toolbar-item-shadow);
-							}
+					backdrop-filter: saturate(1.2) blur(3px);
+				}
 			}
 		}
 
@@ -77,7 +68,8 @@
 
 			> #tabbrowser-arrowscrollbox {
 				background-color: light-dark(#ffffff80, #ffffff3f);
-					}
+				backdrop-filter: saturate(1.2) blur(6px);
+			}
 
 			> #pinned-tabs-container > .tabbrowser-tab .tab-background {
 				backdrop-filter: blur(3px);
@@ -138,7 +130,7 @@
 		}
 
 		+ #browser > #sidebar-container {
-			z-index: var(--browser-stack-z-index-rdm-toolbar);
+			z-index: 4;
 
 			&[sidebar-positionend] {
 				inset-inline-end: 0;
@@ -216,19 +208,10 @@
 		}
 
 		#urlbar-container {
-			--urlbar-container-min-width: 320.1px;
-
-			@media (max-width: 770px) {
-				--urlbar-container-min-width: 155.1px;
-			}
-
-			@media (max-width: 550px) {
-				--urlbar-container-min-width: 101.1px;
-			}
-
 			> .urlbar > .urlbar-background {
 				background-color: var(--opt-theme-toolbar-item-background) !important;
-						box-shadow: var(--opt-theme-toolbar-item-inner-shadow) !important;
+				backdrop-filter: saturate(1.2) blur(6px);
+				box-shadow: var(--opt-theme-toolbar-item-inner-shadow) !important;
 
 				@media (-moz-mac-tahoe-theme) or (-moz-pref("tahoe.theme.toolbar")) {
 					box-shadow: var(--opt-theme-toolbar-item-inner-shadow), var(--opt-tahoe-theme-urlbar-shadow) !important;
@@ -257,7 +240,8 @@
 				:root:not([customizing]) #nav-bar &:not(:-moz-window-inactive) {
 					background-color: var(--opt-theme-toolbar-item-background);
 					box-shadow: var(--opt-theme-toolbar-item-inner-shadow), var(--opt-tahoe-theme-toolbar-item-shadow);
-							}
+					backdrop-filter: saturate(1.2) blur(3px);
+				}
 			}
 		}
 
@@ -340,7 +324,7 @@
 		}
 
 		+ #browser > #sidebar-container {
-			z-index: var(--browser-stack-z-index-rdm-toolbar);
+			z-index: 4;
 
 			:root[sidebar-expand-on-hover] & {
 				background: none !important;

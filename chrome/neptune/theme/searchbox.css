@@ -1,5 +1,5 @@
 /*---------- Search box ----------*/
-.searchbar,
+#searchbar,
 .findbar-textbox,
 .urlbar-input-container,
 sidebar-panel-header .search-container,
@@ -9,7 +9,7 @@ textarea:not(#select-translations-panel-text-area) {
 	outline-offset: 0 !important;
 }
 
-.searchbar:focus-within,
+#searchbar:focus-within,
 .findbar-textbox:focus,
 .urlbar[open] > .urlbar-input-container,
 sidebar-panel-header .search-container:focus-within,

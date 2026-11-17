@@ -43,8 +43,8 @@
 
 	/* FF Variable */
 	--toolbar-start-end-padding: 10px !important;
-	--urlbar-min-height: var(--size-item-large) !important;
-	--urlbar-basic-component-size: var(--urlbar-min-height) !important;
+	--urlbar-height: var(--size-item-large) !important;
+	--urlbar-basic-component-size: var(--urlbar-height) !important;
 	--urlbarView-small-font-size: 0.84em !important;
 	--urlbar-input-gap: 0 !important;
 	--urlbar-icon-padding: calc((var(--size-item-medium) - 2px - 2px - 16px ) / 2) !important;
@@ -77,6 +77,7 @@
 	--panel-border-color: transparent !important;
 	--toolbar-background-color: transparent !important;
 	--tabpanel-background-color: transparent !important;
+	--browser-clip-region: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	--toolbarbutton-padding-inner: calc((var(--size-item-large) - var(--size-item-small)) / 2) !important;
 	--toolbarbutton-padding-outer-narrow: 2px !important;
 	--toolbarbutton-icon-fill: color-mix(in srgb, currentColor 70%, transparent) !important;

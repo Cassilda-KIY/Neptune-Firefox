@@ -85,7 +85,7 @@
 	@media (-moz-platform: macos) {
 		.titlebar-buttonbox-container {
 			position: absolute;
-			inset-block-start: calc(var(--nept-browser-toolbox-padding) + (var(--urlbar-min-height) - 16px) / 2);
+			inset-block-start: calc(var(--nept-browser-toolbox-padding) + (var(--urlbar-height) - 16px) / 2);
 			inset-inline-start: var(--space-small);
 		}
 	}
@@ -185,7 +185,7 @@
  	}
 
 	> #tabbrowser-tabbox {
-		/* clip-path removed --browser-clip-region deprecated in FF160+ */
+		clip-path: var(--browser-clip-region);
 
 		.browserContainer {
 			grid-template-areas:

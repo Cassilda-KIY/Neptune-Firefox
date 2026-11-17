@@ -32,7 +32,7 @@
 		padding-block-end: var(--space-xsmall) !important;
 
 		&[sidebarcommand="viewGenaiChatSidebar"] {
-			/* clip-path removed --browser-clip-region deprecated in FF160+ */
+			clip-path: var(--browser-clip-region);
 		}
 	}
 
