@@ -53,6 +53,20 @@
 }
 
 
+@-moz-document url("about:privatebrowsing") {
+	/* Hide the centre search box on private browsing page */
+	.search-inner-wrapper,
+	.search-wrapper {
+		display: none !important;
+	}
+
+	/* Hide the privacy info card text */
+	.info-border {
+		display: none !important;
+	}
+}
+
+
 @-moz-document url("about:home"), url("about:newtab"), url("about:welcome") {
 	* {
 		cursor: auto !important;

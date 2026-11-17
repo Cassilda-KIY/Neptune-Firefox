@@ -365,10 +365,7 @@ treechildren::-moz-tree-image(query, OrganizerQuery_tags_______v) {
 	display: none;
 
 	#TabsToolbar > & {
-		position: fixed;
-		inset-block-start: calc(var(--nept-browser-toolbox-padding) + var(--toolbarbutton-padding-inner));
-		inset-inline-start: calc(76px + var(--toolbar-start-end-padding) + var(--toolbarbutton-padding-outer)) !important;
-		margin-inline: calc(var(--toolbarbutton-padding-inner) + var(--toolbar-start-end-padding) / 2) !important;
+		display: none !important;
 	}
 
 	#navigator-toolbox[tabs-hidden] #nav-bar > & {
