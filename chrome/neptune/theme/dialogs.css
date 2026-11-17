@@ -39,7 +39,6 @@
 .dialogBox:not(.spotlightBox) {
 	border-radius: var(--border-radius-xlarge) !important;
 	box-shadow: var(--nept-menu-shadow) !important;
-	backdrop-filter: saturate(1.5) blur(var(--dimension-12));
 }
 
 .dialog-button-box button,

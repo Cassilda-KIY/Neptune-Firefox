@@ -38,8 +38,7 @@
 
 			> .urlbar > .urlbar-background {
 				background-color: var(--opt-theme-toolbar-item-background) !important;
-				backdrop-filter: saturate(1.2) blur(6px);
-				box-shadow: var(--opt-theme-toolbar-item-inner-shadow) !important;
+						box-shadow: var(--opt-theme-toolbar-item-inner-shadow) !important;
 
 				@media (-moz-mac-tahoe-theme) or (-moz-pref("tahoe.theme.toolbar")) {
 					box-shadow: var(--opt-theme-toolbar-item-inner-shadow),  var(--opt-tahoe-theme-urlbar-shadow) !important;
@@ -68,8 +67,7 @@
 				:root:not([customizing]) #nav-bar &:not(:-moz-window-inactive) {
 					background-color: var(--opt-theme-toolbar-item-background);
 					box-shadow: var(--opt-theme-toolbar-item-inner-shadow), var(--opt-tahoe-theme-toolbar-item-shadow);
-					backdrop-filter: saturate(1.2) blur(3px);
-				}
+							}
 			}
 		}
 
@@ -79,8 +77,7 @@
 
 			> #tabbrowser-arrowscrollbox {
 				background-color: light-dark(#ffffff80, #ffffff3f);
-				backdrop-filter: saturate(1.2) blur(6px);
-			}
+					}
 
 			> #pinned-tabs-container > .tabbrowser-tab .tab-background {
 				backdrop-filter: blur(3px);
@@ -231,8 +228,7 @@
 
 			> .urlbar > .urlbar-background {
 				background-color: var(--opt-theme-toolbar-item-background) !important;
-				backdrop-filter: saturate(1.2) blur(6px);
-				box-shadow: var(--opt-theme-toolbar-item-inner-shadow) !important;
+						box-shadow: var(--opt-theme-toolbar-item-inner-shadow) !important;
 
 				@media (-moz-mac-tahoe-theme) or (-moz-pref("tahoe.theme.toolbar")) {
 					box-shadow: var(--opt-theme-toolbar-item-inner-shadow), var(--opt-tahoe-theme-urlbar-shadow) !important;
@@ -261,8 +257,7 @@
 				:root:not([customizing]) #nav-bar &:not(:-moz-window-inactive) {
 					background-color: var(--opt-theme-toolbar-item-background);
 					box-shadow: var(--opt-theme-toolbar-item-inner-shadow), var(--opt-tahoe-theme-toolbar-item-shadow);
-					backdrop-filter: saturate(1.2) blur(3px);
-				}
+							}
 			}
 		}
 

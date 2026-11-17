@@ -25,21 +25,18 @@
 
 	.search-wrapper input,
 	.search-handoff-button {
-		backdrop-filter: saturate(1.5) blur(6px);
 		border: none !important;
 		box-shadow: none !important;
 	}
 
 	.contentSearchSuggestionTable {
 		background-color: var(--newtab-background-color-secondary) !important;
-		backdrop-filter: saturate(1.5) blur(var(--dimension-12));
 		border-radius: var(--border-radius-large) !important;
 		box-shadow: var(--nept-small-shadow), var(--nept-menu-shadow) !important;
 
 		.contentSearchHeader, .contentSearchSettingsButton {
 			background-color: var(--newtab-background-color-secondary) !important;
-			backdrop-filter: saturate(1.5) blur(var(--dimension-12));
-			border-color: transparent !important;
+				border-color: transparent !important;
 		}
 
 		.contentSearchOneOffsTable {
@@ -163,9 +160,7 @@
 
 			panel-list {
 				background-color: var(--newtab-background-color-secondary) !important;
-				backdrop-filter: saturate(1.5) blur(var(--dimension-12));
-
-				> panel-item {
+						> panel-item {
 					--panel-item-button-margin: 0 var(--space-xsmall) !important;
 					--panel-item-button-border-radius: var(--border-radius-small) !important;
 				}
@@ -198,8 +193,7 @@
 			background-color: var(--newtab-background-color-secondary) !important;
 			height: calc(2 * var(--size-item-xlarge)) !important;
 			width: calc(2 * var(--size-item-xlarge)) !important;
-			backdrop-filter: saturate(1.5) blur(var(--dimension-12));
-			outline: none !important;
+				outline: none !important;
 			border: none !important;
 			border-radius: var(--border-radius-xlarge) !important;
 			box-shadow: none !important;
@@ -250,7 +244,6 @@
 	}
 
 	.context-menu {
-		backdrop-filter: saturate(1.5) blur(var(--dimension-12));
 		border-radius: var(--border-radius-medium) !important;
 		box-shadow: var(--nept-small-shadow), var(--nept-menu-shadow) !important;
 		font: menu !important;
@@ -344,8 +337,6 @@
 	}
 
 	.modal {
-		backdrop-filter: saturate(1.5) blur(var(--dimension-12));
-
 		.edit-topsites-wrapper & {
 			width: 40em !important;
 			top: 25vh !important;
@@ -658,12 +649,10 @@
 
 	.feature-highlight .feature-highlight-modal {
 		border-radius: var(--border-radius-large) !important;
-		backdrop-filter: saturate(1.5) blur(var(--dimension-12)) !important;
 		box-shadow: var(--box-shadow-level-4) !important;
 
 		&::after {;
-			backdrop-filter: saturate(1.5) blur(var(--dimension-12)) !important;
-			box-shadow: var(--box-shadow-level-4) !important;
+				box-shadow: var(--box-shadow-level-4) !important;
 		}
 	}
 
@@ -701,8 +690,7 @@
 			--weather-hot-background-color: transparent !important;
 			height: auto !important;
 			padding: var(--space-small) var(--space-medium) !important;
-			backdrop-filter: saturate(1.5) blur(6px);
-			gap: var(--space-medium);
+				gap: var(--space-medium);
 			border-radius: var(--border-radius-xlarge) !important;
 			outline: none !important;
 			box-shadow: none !important;
@@ -816,20 +804,17 @@
 			--button-min-height-small: var(--size-item-small) !important;
 			--button-border-radius: var(--border-radius-large) !important;
 			background-color: var(--newtab-background-color-secondary) !important;
-			backdrop-filter: saturate(1.5) blur(var(--dimension-12));
-			border-radius: var(--border-radius-circle) !important;
+				border-radius: var(--border-radius-circle) !important;
 		}
 
 		> .weatherNotAvailable {
 			background-color: var(--newtab-background-card) !important;
-			backdrop-filter: saturate(1.5) blur(var(--dimension-12));
-			border-radius: var(--border-radius-circle) !important;
+				border-radius: var(--border-radius-circle) !important;
 		}
 	}
 
 	.weatherInfoLink {
 		background-color: var(--newtab-weather-background-color) !important;
-		backdrop-filter: saturate(1.5) blur(var(--dimension-12));
 		padding: var(--space-medium) var(--space-large) !important;
 		border-radius: var(--border-radius-circle) !important;
 	}
@@ -856,23 +841,19 @@
 
 	.weather-placeholder {
 		background: var(--newtab-background-card) !important;
-		backdrop-filter: saturate(1.5) blur(var(--dimension-12));
 		border-radius: var(--border-radius-xlarge) !important;
 
 		.placeholder-fill {
-			backdrop-filter: saturate(1.5) blur(var(--dimension-12));
-			border-radius: var(--border-radius-xlarge) !important;
+				border-radius: var(--border-radius-xlarge) !important;
 		}
 	}
 
 	.feature-highlight .feature-highlight-modal {
 		border-radius: var(--border-radius-large) !important;
-		backdrop-filter: saturate(1.5) blur(var(--dimension-12)) !important;
 		box-shadow: var(--box-shadow-level-4) !important;
 
 		&::after {;
-			backdrop-filter: saturate(1.5) blur(var(--dimension-12)) !important;
-			box-shadow: var(--box-shadow-level-4) !important;
+				box-shadow: var(--box-shadow-level-4) !important;
 		}
 	}
 
