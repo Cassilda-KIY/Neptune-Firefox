@@ -32,7 +32,7 @@
 		padding-block-end: var(--space-xsmall) !important;
 
 		&[sidebarcommand="viewGenaiChatSidebar"] {
-			clip-path: var(--browser-clip-region);
+			
 		}
 	}
 

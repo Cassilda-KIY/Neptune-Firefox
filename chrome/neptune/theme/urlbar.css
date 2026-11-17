@@ -13,7 +13,7 @@
 }
 
 .urlbar {
-	height: var(--urlbar-height) !important;
+	height: var(--urlbar-min-height) !important;
 	width: var(--urlbar-width) !important;
 	margin: 0 !important;
 	font-size: var(--default-font-size) !important;
@@ -62,7 +62,7 @@
 			}
 		}*/
 
-		.urlbar:not([focused]) > &:not(#search-container > #searchbar-new > &) > .urlbar-input-box > .urlbar-input {
+		.urlbar:not([focused]) > &:not(.search-container > #searchbar-new > &) > .urlbar-input-box > .urlbar-input {
 			text-align: center !important;
 		}
 
@@ -181,7 +181,7 @@
 	border-inline: none !important;
 	border-radius: var(--border-radius-xlarge);
 	background-color: var(--nept-secondary-background);
-	backdrop-filter: saturate(1.5) blur(var(--dimension-12));
+	backdrop-filter: blur(var(--dimension-12));
 	box-shadow: var(--nept-small-shadow), var(--nept-menu-shadow) !important;
 
 	@media -moz-pref("browser.nova.enabled") {

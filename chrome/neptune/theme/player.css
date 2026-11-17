@@ -5,7 +5,7 @@
 	}
 
 	body {
-		clip-path: var(--browser-clip-region);
+		
 	}
 
 	#controls .control-item {
@@ -18,7 +18,7 @@
 
 	#controls-bottom-gradient {
 		background: #202020bf !important;
-		backdrop-filter: saturate(1.5) blur(var(--dimension-12));
+		backdrop-filter: blur(var(--dimension-12));
 		height: calc(var(--player-control-item-height) + var(--controls-bottom-upper-height) + var(--scrubber-vertical-margin) + var(--resize-margin)) !important;
 		width: min((50% + var(--player-control-item-half-width)), 30em) !important;
 		border-radius: var(--border-radius-xlarge);
@@ -141,7 +141,7 @@
 
 		> .box {
 			background-color: #202020bf !important;
-			backdrop-filter: saturate(1.5) blur(var(--dimension-12));
+			backdrop-filter: blur(var(--dimension-12));
 			padding: 0 !important;
 			font-size: 0.875em !important;
 

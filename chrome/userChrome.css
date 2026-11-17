@@ -17,19 +17,21 @@ It must work together with “Startpage_for_transparent_toolbox.css” in "userC
 /* ========== HIDE PRIVATE BROWSING INDICATOR - Targets #nav-bar directly ========== */
 /* Per skill pitfalls: target #nav-bar > .private-browsing-indicator-with-label without tabs-hidden constraint */
 #nav-bar > .private-browsing-indicator-with-label,
-#nav-bar > .private-browsing-indicator-with-label > .private-browsing-indicator-icon,
-#nav-bar > .private-browsing-indicator-with-label > .private-browsing-indicator-label {
+#nav-bar > .private-browsing-indicator-with-label > *,
+#TabsToolbar > .private-browsing-indicator-with-label,
+#TabsToolbar > .private-browsing-indicator-with-label > *,
+.private-browsing-indicator,
+.private-browsing-indicator-with-label,
+.private-browsing-indicator-icon,
+.private-browsing-indicator-label,
+:root[privatebrowsingmode] .private-browsing-indicator,
+:root[privatebrowsingmode="temporary"] .private-browsing-indicator,
+:root[privatebrowsingmode] .private-browsing-indicator-with-label,
+:root[privatebrowsingmode="temporary"] .private-browsing-indicator-with-label {
 	display: none !important;
 	visibility: collapse !important;
 	opacity: 0 !important;
 	height: 0 !important;
 	width: 0 !important;
 	overflow: hidden !important;
-}
-
-/* Also hide all other variants for maximum coverage */
-:root[privatebrowsingmode] #nav-bar > .private-browsing-indicator-with-label,
-:root[privatebrowsingmode="temporary"] #nav-bar > .private-browsing-indicator-with-label {
-	display: none !important;
-	visibility: collapse !important;
 }

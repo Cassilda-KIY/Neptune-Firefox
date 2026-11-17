@@ -29,7 +29,7 @@
 
 	.dropdown .dropdown-popup {
 		background-color: var(--newtab-background-color-secondary) !important;
-		backdrop-filter: saturate(1.5) blur(3em);
+		backdrop-filter: blur(3em);
 		border-color: var(--nept-toolbar-border-color) !important;
 		border-radius: var(--border-radius-large) !important;
 		box-shadow: var(--nept-menu-shadow) !important;
