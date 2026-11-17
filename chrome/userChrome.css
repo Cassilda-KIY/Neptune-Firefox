@@ -2,7 +2,8 @@
 
 /* On Windows, you must choose one of the titlebar buttons. macOS can ignore it. */
 /* @import "neptune/optionals/macos_controls.css"; */
- @import "neptune/optionals/windows_native_controls.css"; 
+@import "neptune/optionals/windows_native_controls.css";
+
 
 /* Optionals */
 /* @import "neptune/optionals/Show_bookmarks_bar_on_hover.css"; */
