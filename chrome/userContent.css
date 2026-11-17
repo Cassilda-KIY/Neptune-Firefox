@@ -31,3 +31,12 @@
 		background: url("neptune/assets/background_image/Chaos_Ridge_Dark.png") center/cover fixed;
 	}
 }
+/* Hide Firefox's private browsing watermark/indicator on all pages */
+@-moz-document url-prefix("http"), url-prefix("https") {
+	:root[privatebrowsingmode] body::after,
+	.private-browsing-indicator,
+	#private-browsing-indicator,
+	[style*="privatebrowsing"] {
+		display: none !important;
+	}
+}

@@ -152,3 +152,9 @@
 		}
 	}
 }
+/* Hide private browsing indicator/watermark on all pages */
+:root[privatebrowsingmode] body::after,
+.private-browsing-indicator,
+#private-browsing-indicator {
+	display: none !important;
+}
