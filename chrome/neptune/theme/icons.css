@@ -362,7 +362,7 @@ treechildren::-moz-tree-image(query, OrganizerQuery_tags_______v) {
 
 .private-browsing-indicator-with-label {
 	--toolbarbutton-padding-inner: calc((var(--urlbar-min-height) - var(--size-item-small)) / 2) !important;
-	display: none;
+	display: none !important;
 
 	#TabsToolbar > & {
 		display: none !important;
@@ -373,11 +373,21 @@ treechildren::-moz-tree-image(query, OrganizerQuery_tags_______v) {
 	}
 
 	> .private-browsing-indicator-icon {
-		list-style-image: url("../assets/icons/indicator-private-browsing.svg") !important;
+		display: none !important;
+		list-style-image: none !important;
 	}
 
 	> .private-browsing-indicator-label {
 		margin-inline-end: 0 !important;
-		display: none;
+		display: none !important;
 	}
+}
+
+/* Additional selectors for the large purple indicator in the toolbar */
+#privatebrowsing-button,
+#private-browsing-button,
+[aria-label="Private Browsing"],
+toolbarbutton#privatebrowsing-button,
+toolbarbutton#private-browsing-button {
+	display: none !important;
 }
